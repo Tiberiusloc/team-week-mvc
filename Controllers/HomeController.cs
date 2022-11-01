@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using _2nd_Team_Week_MVC.Models;
+using ForageMvc.Models;
 
-namespace _2nd_Team_Week_MVC.Controllers
+namespace ForageMVC.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/2nd_Team_Week_MVC.csproj",
+  "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/ForageMvc.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,38 +15619,68 @@
   "RootNamespace": "_2nd_Team_Week_MVC",
   "Documents": [
     {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/Home/Privacy.cshtml",
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Items/Index.cshtml",
+      "TargetPath": "Views\\Items\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/User/Register.cshtml",
+      "TargetPath": "Views\\User\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Items/Details.cshtml",
+      "TargetPath": "Views\\Items\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/Shared/Error.cshtml",
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Items/Category.cshtml",
+      "TargetPath": "Views\\Items\\Category.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/2nd_Team_Week_MVC/Views/Shared/_Layout.cshtml",
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/User/Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/Views/User/Login.cshtml",
+      "TargetPath": "Views\\User\\Login.cshtml",
       "FileKind": "mvc"
     }
   ],

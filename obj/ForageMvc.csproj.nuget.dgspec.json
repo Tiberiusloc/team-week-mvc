@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/peckii/Desktop/ForageMvc/ForageMvc/2nd_Team_Week_MVC.csproj": {}
+    "/Users/peckii/Desktop/ForageMvc/ForageMvc/ForageMvc.csproj": {}
   },
   "projects": {
-    "/Users/peckii/Desktop/ForageMvc/ForageMvc/2nd_Team_Week_MVC.csproj": {
+    "/Users/peckii/Desktop/ForageMvc/ForageMvc/ForageMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/peckii/Desktop/ForageMvc/ForageMvc/2nd_Team_Week_MVC.csproj",
-        "projectName": "2nd_Team_Week_MVC",
-        "projectPath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/2nd_Team_Week_MVC.csproj",
+        "projectUniqueName": "/Users/peckii/Desktop/ForageMvc/ForageMvc/ForageMvc.csproj",
+        "projectName": "ForageMvc",
+        "projectPath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/ForageMvc.csproj",
         "packagesPath": "/Users/peckii/.nuget/packages/",
         "outputPath": "/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/",
         "projectStyle": "PackageReference",
@@ -38,13 +38,31 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
-            "NewtonSoft.Json": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0-alpha.2, )"
             },
             "RestSharp": {
               "target": "Package",

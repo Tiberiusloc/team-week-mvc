@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace _2nd_Team_Week_MVC
+namespace ForageMvc
 {
     public class Program
     {

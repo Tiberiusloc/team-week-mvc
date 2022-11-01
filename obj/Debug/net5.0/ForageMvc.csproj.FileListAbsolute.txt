@@ -1,0 +1,8 @@
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.csproj.AssemblyReference.cache
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.GeneratedMSBuildEditorConfig.editorconfig
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.AssemblyInfoInputs.cache
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.AssemblyInfo.cs
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.csproj.CoreCompileInputs.cache
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.MvcApplicationPartsAssemblyInfo.cache
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.RazorAssemblyInfo.cache
+/Users/peckii/Desktop/ForageMvc/ForageMvc/obj/Debug/net5.0/ForageMvc.RazorAssemblyInfo.cs

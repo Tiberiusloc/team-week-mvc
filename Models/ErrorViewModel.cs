@@ -1,6 +1,6 @@
 using System;
 
-namespace _2nd_Team_Week_MVC.Models
+namespace ForageMvc.Models
 {
     public class ErrorViewModel
     {
