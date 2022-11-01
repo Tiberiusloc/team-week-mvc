@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ForageMvc.Controllers
 {
-  public class ForageMvcController : Controller
+  public class ItemsController : Controller
   {
     public IActionResult Index()
     {
@@ -18,10 +18,10 @@ namespace ForageMvc.Controllers
       return View(allItems);
     }
 
-    public ActionResult Category()
+    public ActionResult Category(string cat)
 		{
-      var allItems = Item.GetItems();
-			return View(allItems);
+      var allCatItems = Item.GetCatItems(cat);
+			return View(allCatItems);
 		}
 
 		public ActionResult Details(int id)

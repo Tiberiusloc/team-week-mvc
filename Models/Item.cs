@@ -37,6 +37,18 @@ namespace ForageMvc.Models
       return itemList;
     }
 
+    public static List<Item> GetCatItems(string cat)
+    {
+      var apiCallTask = ApiHelper.GetCat(cat);
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Item> itemList = JsonConvert.DeserializeObject<List<Item>>(jsonResponse.ToString());
+
+      return itemList;
+    }
+
+
      public static Item GetItemDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);

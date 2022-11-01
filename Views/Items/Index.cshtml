@@ -1,4 +1,26 @@
+@{
+	Layout = "_Layout";
+}
+//desert
+ @using (Html.BeginForm("Category"))   
+ {
+      @Html.Hidden("desert", "cat");
+      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;"><img src="css/assets/img/desert-category.png" width="150px"/></button>
 
+ }
+ //forest
+@using (Html.BeginForm("Category"))   
+ {
+       @Html.Hidden("forest", "cat");
+      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;">
+         <img src="css/assets/img/forest-category.png" width="150px"/></button>
+ }
+ //coast
+ @using (Html.BeginForm("Category"))   
+ {
+       @Html.Hidden("coast", "cat");
+      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;">
+         <img src="css/assets/img/coast-category.png" width="150px"/></button>
+ }
 
-<h1>All Items:</h1>
 
