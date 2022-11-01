@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@using System.Security.Claims
+
+<p style="color:red">@ViewBag.ErrorMesssage</p>
+@if (User.Identity.IsAuthenticated)
+{
+  <h3>Welcome @User.Identity.Name!</h3>
+
+@Html.ActionLink("Choose Your Adventure!", "Index", "Items")
+}

@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@using ForageMvc.ViewModels
+
+@model LoginViewModel
+
+<h3>Log in with your email and password</h3>
+<hr />
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.Email)
+  @Html.TextBoxFor(m => m.Email)
+  <br>
+  @Html.LabelFor(m => m.Password)
+  @Html.PasswordFor(m => m.Password)
+  <br>
+  <input type="submit" value="Log In" />
+}
