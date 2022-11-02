@@ -6,8 +6,8 @@
 
 <h3>Select Difficulty Level:</h3>
 <form id="DifficultyLevel">
-  <select class="form-control">
-      @* <option>Select Level</option>  *@
+  <select class="form-control" id="select">
+      <option>Select Level</option> 
       <option value="easy">Easy</option> 
       <option value="medium">Medium</option>
       <option value="hard">Hard</option>  
@@ -16,44 +16,46 @@
 </form>
 
 <script type="text/javascript">
-function submitForm(event) {
-  @* event.preventDefault(); *@
+function submitEvent(event) {
+  event.preventDefault();
+  handleFormSubmission();
+}
+function handleFormSubmission () {
   hideResults();
-  let formvalue = document.getElementById("DifficultyLevel").value;
-    console.log(formvalue);
+  let formvalue = document.getElementById("select").value;
     if (formvalue == "easy") {
-        document.getElementById("easy").removeAttribute("display");
+        document.getElementById("easy").removeAttribute("class", "hidden");
     }
     if (formvalue == "medium") {
-        document.getElementById("medium").removeAttribute("display");
+        document.getElementById("medium").removeAttribute("class", "hidden");
     }
     if (formvalue == "hard") {
-        document.getElementById("hard").removeAttribute("display");
+        document.getElementById("hard").removeAttribute("class", "hidden");
     }
     else {
     }
 }
   function hideResults() {
-  document.getElementById("easy").setAttribute("display", "none"); 
-  document.getElementById("medium").setAttribute("display", "none"); 
-  document.getElementById("hard").setAttribute("display", "none"); 
+  document.getElementById("easy").setAttribute("class", "hidden"); 
+  document.getElementById("medium").setAttribute("class", "hidden"); 
+  document.getElementById("hard").setAttribute("class", "hidden"); 
 }
 
 window.addEventListener("load", function() {
   hideResults();
   const form = document.getElementById("DifficultyLevel");
-  form.addEventListener("submit", submitForm());
+  form.addEventListener("submit", submitEvent);
 });
 </script>
 
-<div id="easy">
+<div id="easy" class="hidden">
 <ul>
 	@foreach (Item item in Model)
 	{
     if (item.Difficulty == "easy")
     {
 		<li>
-			<p>@item.Name | @item.Category | @item.Difficulty | <img src ="${@item.Picture}"> </p>
+			<p>@item.Name | @item.Category | @item.Difficulty </p>
 		</li>
 		<br>
     }
@@ -61,7 +63,7 @@ window.addEventListener("load", function() {
 </ul>
 </div>
 
-<div id="medium">
+<div id="medium" class="hidden">
 <ul>
 	@foreach (Item item in Model)
 	{
@@ -76,7 +78,7 @@ window.addEventListener("load", function() {
 </ul>
 </div>
 
-<div id="hard">
+<div id="hard" class="hidden">
 <ul>
 	@foreach (Item item in Model)
 	{

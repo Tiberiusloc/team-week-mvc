@@ -87,13 +87,6 @@ body {
 #item-heading {
   text-align: center;
 }
-
-#easy {
+.hidden {
   display: none;
-}
-/* #medium {
-  display:none;
-} */
-#hard {
-  display:none;
-}
+} 
