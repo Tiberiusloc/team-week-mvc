@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HLehr\\desktop\\ForageMvc\\ForageMvc.csproj": {}
+    "C:\\Users\\kelly\\OneDrive\\Desktop\\ForageMvc\\ForageMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HLehr\\desktop\\ForageMvc\\ForageMvc.csproj": {
+    "C:\\Users\\kelly\\OneDrive\\Desktop\\ForageMvc\\ForageMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HLehr\\desktop\\ForageMvc\\ForageMvc.csproj",
+        "projectUniqueName": "C:\\Users\\kelly\\OneDrive\\Desktop\\ForageMvc\\ForageMvc.csproj",
         "projectName": "ForageMvc",
-        "projectPath": "C:\\Users\\HLehr\\desktop\\ForageMvc\\ForageMvc.csproj",
-        "packagesPath": "C:\\Users\\HLehr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HLehr\\desktop\\ForageMvc\\obj\\",
+        "projectPath": "C:\\Users\\kelly\\OneDrive\\Desktop\\ForageMvc\\ForageMvc.csproj",
+        "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kelly\\OneDrive\\Desktop\\ForageMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HLehr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kelly\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
