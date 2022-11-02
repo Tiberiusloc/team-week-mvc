@@ -12,5 +12,6 @@ namespace ForageMvc.Models
 
     public virtual ICollection<UserCard> JoinEntities { get; }
     public int Score { get; set; }
+    public virtual User Users { get; set; }
   }
 }

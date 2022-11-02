@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+<head>
+<link href="~/css/login.css" rel="stylesheet">
+</head>
+
+@using ForageMvc.ViewModels
+
+@model LoginViewModel
+
+<div class="mascot"><img src="~/img/botanist.png" style="width: 15em; height:25em;">
+</div>
+
+<h3 class="logininstr">Log in with your email and password</h3>
+<hr />
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.Email, null, new{@class = "email"})
+  @Html.TextBoxFor(m => m.Email)
+  <br>
+  <br>
+  <br>
+  @Html.LabelFor(m => m.Password, null, new{@class = "password"})
+  @Html.PasswordFor(m => m.Password)
+  <br>
+  <input type="submit" value="Log In" class="loginbtn" />
+}
