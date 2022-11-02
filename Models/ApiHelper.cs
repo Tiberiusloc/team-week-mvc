@@ -29,6 +29,14 @@ namespace ForageMvc.Models
       return response.Content;
     }
 
+    // public static async Task<string> GetCatDiff(string cat, string diff)
+    // {
+    //   RestClient client = new RestClient("http://localhost:5003/api");
+    //   RestRequest request = new RestRequest($"items?category={cat}&difficulty={diff}", Method.GET);
+    //   var response = await client.ExecuteTaskAsync(request);
+    //   return response.Content;
+    // }
+
     public static async Task Put(int id, string item)
 		{
 			RestClient client = new RestClient("http://localhost:5003/api");

@@ -1,0 +1,92 @@
+@{
+	Layout = "_Layout";
+}
+@using ForageMvc.Models
+@using System;
+
+<h3>Select Difficulty Level:</h3>
+<form id="DifficultyLevel">
+  <select class="form-control">
+      @* <option>Select Level</option>  *@
+      <option value="easy">Easy</option> 
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>  
+  </select>
+<button id="button" type="submit">Select</button>
+</form>
+
+<script type="text/javascript">
+function submitForm(event) {
+  @* event.preventDefault(); *@
+  hideResults();
+  let formvalue = document.getElementById("DifficultyLevel").value;
+    console.log(formvalue);
+    if (formvalue == "easy") {
+        document.getElementById("easy").removeAttribute("display");
+    }
+    if (formvalue == "medium") {
+        document.getElementById("medium").removeAttribute("display");
+    }
+    if (formvalue == "hard") {
+        document.getElementById("hard").removeAttribute("display");
+    }
+    else {
+    }
+}
+  function hideResults() {
+  document.getElementById("easy").setAttribute("display", "none"); 
+  document.getElementById("medium").setAttribute("display", "none"); 
+  document.getElementById("hard").setAttribute("display", "none"); 
+}
+
+window.addEventListener("load", function() {
+  hideResults();
+  const form = document.getElementById("DifficultyLevel");
+  form.addEventListener("submit", submitForm());
+});
+</script>
+
+<div id="easy">
+<ul>
+	@foreach (Item item in Model)
+	{
+    if (item.Difficulty == "easy")
+    {
+		<li>
+			<p>@item.Name | @item.Category | @item.Difficulty | <img src ="${@item.Picture}"> </p>
+		</li>
+		<br>
+    }
+	}
+</ul>
+</div>
+
+<div id="medium">
+<ul>
+	@foreach (Item item in Model)
+	{
+    if (item.Difficulty == "medium")
+    {
+		<li>
+			<p>@item.Name | @item.Category | @item.Difficulty</p>
+		</li>
+		<br>
+    }
+	}
+</ul>
+</div>
+
+<div id="hard">
+<ul>
+	@foreach (Item item in Model)
+	{
+    if (item.Difficulty == "hard")
+    {
+		<li>
+			<p>@item.Name | @item.Category | @item.Difficulty</p>
+		</li>
+		<br>
+    }
+	}
+</ul>
+</div>

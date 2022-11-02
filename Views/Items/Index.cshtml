@@ -1,26 +1,22 @@
 @{
 	Layout = "_Layout";
 }
-//desert
- @using (Html.BeginForm("Category"))   
- {
-      @Html.Hidden("desert", "cat");
-      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;"><img src="css/assets/img/desert-category.png" width="150px"/></button>
-
- }
- //forest
-@using (Html.BeginForm("Category"))   
- {
-       @Html.Hidden("forest", "cat");
-      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;">
-         <img src="css/assets/img/forest-category.png" width="150px"/></button>
- }
- //coast
- @using (Html.BeginForm("Category"))   
- {
-       @Html.Hidden("coast", "cat");
-      <button type="submit" name="button" value="ActionOne" class="button" style="border-style: none;">
-         <img src="css/assets/img/coast-category.png" width="150px"/></button>
- }
+<h3 id="item-heading">Which Oregon ecosystem are you exploring?</h3>
+<div id="cat-buttons">
+  @using (Html.BeginForm("Category", "Items", new { cat = "desert"}))   
+  {
+        <button type="submit" name="button" value="ActionOne" class="ItemCatBttn" style="border-style: none;"><img src="css/assets/img/desert-category.png" width="150px"/><br>Desert</button>
+  }
+  @using (Html.BeginForm("Category", "Items", new { cat = "forest"}))   
+  {
+        <button type="submit" name="button" value="ActionOne" class="ItemCatBttn" style="border-style: none;">
+        <img src="css/assets/img/forest-category.png" width="150px"/><br>Forest</button>
+  }
+  @using (Html.BeginForm("Category", "Items", new { cat = "coast"}))   
+  {
+        <button type="submit" name="button" value="ActionOne" class="ItemCatBttn" style="border-style: none;">
+        <img src="css/assets/img/coast-category.png" width="150px"/><br>Coast</button>
+  }
+</div>
 
 

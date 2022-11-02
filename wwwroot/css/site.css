@@ -69,3 +69,31 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Item Views
+-------------------------------------------------- */
+.ItemCatBttn {
+  float: left;
+  display: block-inline;
+  padding: 10px;
+  margin: 10px;
+}
+#cat-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#item-heading {
+  text-align: center;
+}
+
+#easy {
+  display: none;
+}
+/* #medium {
+  display:none;
+} */
+#hard {
+  display:none;
+}
