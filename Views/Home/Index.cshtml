@@ -1,13 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
+<head> <link rel="stylesheet" href="~/css/homepage.css"> </head>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Botanical Adventure</h1>
+<div class="homepgtitlediv">
+    <h1 class="homepgtitle">Welcome to Your Botanical Adventure</h1>
 </div>
 
-<div class="text-center">
-    <h3 class="display-4">@Html.ActionLink("Register", "Register", "Users")</h3>
-    <h3 class="display-4">@Html.ActionLink("Log In", "Login", "Users")</h3>
-    <h3 class="display-4">@Html.ActionLink("Instructions", "Instructions")</h3>
+<div class="mascot"><img src="~/img/botanist.png" style="width: 15em; height:25em;">
+</div>
+
+<div class="mascot2"><img src="~/img/fairy_critter_tran.png" style="width: 15em; height:15em;">
+</div>
+
+<div class="homeimg">
+</div>
+
+<div class="links"><
+    <div class="text-center">
+        <div class="row">
+            <div class="col-4">
+                <p class="homebtn">@Html.ActionLink("Register", "Register", "Users")</p>
+            </div>
+            <div class="col-4">
+                <p class="homebtn">@Html.ActionLink("Log In", "Login", "Users")</p>
+            </div>
+            <div class="col-4">
+                <p class="homebtn">@Html.ActionLink("Instructions", "Instructions", new{@class = "link"})</p>
+            </div>
+        </div>
+    </div>
 </div>

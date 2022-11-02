@@ -2,12 +2,29 @@
   Layout = "_Layout";
 }
 
+<head>
+<link href="~/css/userhome.css" rel="stylesheet">
+</head>
+
 @using System.Security.Claims
+@model ForageMvc.Models.User
 
 <p style="color:red">@ViewBag.ErrorMesssage</p>
 @if (User.Identity.IsAuthenticated)
 {
-  <h3>Welcome @User.Identity.Name!</h3>
+  <h3 class="username">Welcome @User.Identity.Name!</h3>
 
-@Html.ActionLink("Choose Your Adventure!", "Index", "Items")
+@Html.ActionLink("Choose Your Adventure!", "Index", "Items", null, new{@class = "advbtn"})
+<div class="diff">
+<p>Easy: 0 - 25</p>
+<p>Medium: 26 - 50</p>
+<p>Hard: 51 - 100</p>
+</div>
+
+}
+else 
+{
+  <h3 class="notloggedin">You have to be logged in to see information here!</h3>
+  <div class="mascot"><img src="~/img/botanist.png" style="width: 15em; height:25em;">
+</div>
 }
