@@ -1,0 +1,108 @@
+body {
+  background-image: url("../img/home_index.webp");
+  background-size: cover;
+}
+
+.homebtn {
+  --glow-color: rgb(190, 255, 176);
+  --glow-spread-color: rgba(28, 170, 47, 0.781);
+  --enhanced-glow-color: rgb(40, 161, 52);
+  --btn-color: rgb(8, 109, 37);
+  border: .25em solid var(--glow-color);
+  padding: 1em 1em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  width: 200px;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .homebtn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .homebtn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 2em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .homebtn:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+ a:link {
+  text-decoration: none;
+  color: #f0ead6;
+ }
+ a:visited {
+  color: black;
+  text-decoration: none;
+ }
+ a:active {
+  color: #f0ead6;
+  text-decoration: none;
+ }
+
+ .homepgtitle{
+  color: black;
+  background-color: white;
+  width: 700px;
+  outline: green;
+  text-align: center;
+  border-radius: 1em;
+  padding: 0.5em 0.5em; 
+  align-content: center;
+ }
+
+ .homepgtitlediv {
+  align-content: center;
+  position: absolute;
+  top: 30%;
+  margin-left: 33%;
+  opacity: .80;
+ }
+
+ .links{
+       position: absolute;
+       bottom: 45%;
+       width: 40%;
+       padding: 10px;
+       margin-left: 32.5%;
+ }
+
+ .mascot {
+       align-content: center;
+       position: absolute;
+       top: 20%;
+       margin-left: 20%;
+ }
+
+ .mascot2{
+       align-content: center;
+       position: absolute;
+       top: 30%;
+       margin-left: 72.5%;
+ }

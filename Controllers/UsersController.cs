@@ -41,6 +41,7 @@ namespace ForageMvc.Controllers
       }
       else
       {
+        ViewBag.ErrogMessage = "Registration Failed.";
         return View();
       }
     }
@@ -60,6 +61,7 @@ namespace ForageMvc.Controllers
       }
       else
       {
+        ViewBag.ErrorMessage = "Unable to Login.";
         return View();
       }
     }

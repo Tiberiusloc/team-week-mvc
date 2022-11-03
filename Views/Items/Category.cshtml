@@ -2,7 +2,6 @@
 	Layout = "_Layout";
 }
 @using ForageMvc.Models
-@using System;
 
 <h3>Select Difficulty Level:</h3>
 <form id="difficulty-level">
@@ -55,7 +54,11 @@ window.addEventListener("load", function() {
     if (item.Difficulty == "easy")
     {
 		<li>
+<<<<<<< HEAD
 			<p>@Html.ActionLink($"{@item.Name}", "Details", new {id = item.ItemId}) | @item.Category | @item.Difficulty </p>
+=======
+			<p>@item.Name | @item.Category | @item.Difficulty </p>
+>>>>>>> 3ba572c48fc90cb93d30f0d0196243f877e93759
 		</li>
 		<br>
     }
@@ -63,19 +66,22 @@ window.addEventListener("load", function() {
 </ul>
 </div>
 
+<<<<<<< HEAD
 <div id="medium" class="hidden">
 <ul>
+=======
+<div id="medium">
+>>>>>>> 3ba572c48fc90cb93d30f0d0196243f877e93759
 	@foreach (Item item in Model)
 	{
     if (item.Difficulty == "medium")
     {
-		<li>
-			<p>@item.Name | @item.Category | @item.Difficulty</p>
-		</li>
-		<br>
+    @using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
+    {
+      <button type="submit"> <img src="@Url.Content(item.Picture)" width="150px"/><br>@item.Name</button>
     }
-	}
-</ul>
+    }
+  }
 </div>
 
 <div id="hard" class="hidden">
@@ -85,7 +91,7 @@ window.addEventListener("load", function() {
     if (item.Difficulty == "hard")
     {
 		<li>
-			<p>@item.Name | @item.Category | @item.Difficulty</p>
+			<p>@item.Name | @item.Category | @item.Picture</p>
 		</li>
 		<br>
     }
