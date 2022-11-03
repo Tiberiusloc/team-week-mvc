@@ -1,6 +1,7 @@
 @{
 	Layout = "_Layout";
 }
+<head> <link rel="stylesheet" href="~/css/site.css"> </head>
 @using ForageMvc.Models
 
 <h3>Select Difficulty Level:</h3>
@@ -47,46 +48,44 @@ window.addEventListener("load", function() {
 });
 </script>
 
-<div id="easy" class="hidden">
-<ul>
+<div id="easy" class="hidden common-class">
 	@foreach (Item item in Model)
 	{
     if (item.Difficulty == "easy")
     {
-		<li>
-			<p>@Html.ActionLink($"{@item.Name}", "Details", new {id = item.ItemId}) | @item.Category | @item.Difficulty </p>
-		</li>
+		@using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
+    {
+      <button type="submit"> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@item.Name</button>
+    }
 		<br>
     }
 	}
-</ul>
 </div>
 
-<div id="medium" class="hidden">
-<ul>
+<div id="medium" class="hidden common-class">
 	@foreach (Item item in Model)
 	{
     if (item.Difficulty == "medium")
     {
-    @using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
+    @using (Html.BeginForm())   
     {
-      <button type="submit"> <img src="@Url.Content(item.Picture)" width="150px"/><br>@item.Name</button>
+      <h6> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@Html.ActionLink(@item.Name, "Details", new { id = item.ItemId})</h6>
     }
+    @* @Html.ActionLink(@item.Name, "Details", new { id = item.ItemId}); *@
     }
   }
 </div>
 
-<div id="hard" class="hidden">
-<ul>
+<div id="hard" class="hidden common-class">
 	@foreach (Item item in Model)
 	{
     if (item.Difficulty == "hard")
     {
-		<li>
-			<p>@item.Name | @item.Category | @item.Picture</p>
-		</li>
+		@using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
+    {
+      <button type="submit"> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@item.Name</button>
+    }
 		<br>
     }
 	}
-</ul>
 </div>

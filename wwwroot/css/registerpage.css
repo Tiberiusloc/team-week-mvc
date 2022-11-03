@@ -23,7 +23,7 @@ body {
   text-shadow: 0 0 .5em var(--glow-color);
   position: absolute;
   transition: all 0.3s;
-  bottom: 52%;
+  bottom: 32%;
   margin-left: 46%;
  }
  
@@ -101,7 +101,7 @@ body {
  }
 
  .conpassword {
-  margin-left: 40%;
+  margin-left: 39.5%;
   color: black;
   border: 2px solid white;
   align-content: center;
@@ -133,6 +133,6 @@ body {
  .mascot {
   align-content: center;
   position: absolute;
-  top: 27%;
+  top: 36%;
   margin-left: 60%;
 }

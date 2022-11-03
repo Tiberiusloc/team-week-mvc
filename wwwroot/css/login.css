@@ -23,7 +23,7 @@ body {
   text-shadow: 0 0 .5em var(--glow-color);
   position: absolute;
   transition: all 0.3s;
-  bottom: 50%;
+  bottom: 45%;
   margin: -5%;
  }
  
@@ -93,7 +93,7 @@ body {
   color: black;
   background-color: white;
   align-content: center;
-  bottom: 30%;
+  bottom: 40%;
   font-weight: bold;
   display: block;
   width: 150px;
@@ -113,7 +113,6 @@ body {
   border-radius: 1em;
   padding: 0.5em 0.5em; 
   align-content: center;
-  align-content: center;
   position: absolute;
   top: 20%;
   margin-left: 30%;
@@ -121,12 +120,12 @@ body {
  }
 
  form {
-  margin-top: 20%;
+  margin-top: 14%;
  }
 
  .mascot {
   align-content: center;
   position: absolute;
-  top: 25%;
+  top: 20%;
   margin-left: 23%;
 }

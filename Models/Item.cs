@@ -25,6 +25,7 @@ namespace ForageMvc.Models
     public string Difficulty { get; set; }
     public bool Found { get; set; }
     public string Picture { get; set; }
+    public string CatPicture { get; set; }
 
     public static List<Item> GetItems()
     {
@@ -49,7 +50,7 @@ namespace ForageMvc.Models
     }
 
 
-     public static Item GetItemDetails(int id)
+    public static Item GetItemDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);
       var result = apiCallTask.Result;

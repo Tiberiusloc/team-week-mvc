@@ -61,6 +61,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-image: url("../img/home_index.webp");
+  background-size: cover;
 }
 .footer {
   position: absolute;
@@ -77,6 +79,11 @@ body {
   display: block-inline;
   padding: 10px;
   margin: 10px;
+  background-color: rgb(219, 219, 219);
+  opacity: .7;
+}
+#img {
+  opacity: 1;
 }
 #cat-buttons {
   display: flex;
@@ -91,9 +98,9 @@ body {
   display: none;
 }
 #medium {
-  margin-left: 10%;
+  margin-left: 23%;
 }
-#medium button {
+#medium h6 {
   color: aliceblue;
   margin-top: 10%;
   margin-left: 1%;
@@ -101,16 +108,54 @@ body {
   float:left;
   background-color: darkgreen;
 }
-#medium button img {
+#medium h6 img {
   padding-left: 10%;
   padding-right: 10%;
   margin-top: 10%;
 }
-#hard {
-  display:none;
+
+/* easy */
+
+#easy {
+  margin-left: 23%;
+}
+#easy h6 {
+  color: aliceblue;
+  margin-top: 10%;
+  margin-left: 1%;
+  border-style: none;
+  float:left;
+  background-color: darkgreen;
+}
+#easy h6 img {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10%;
 }
 
 /* -----UserIndex--------- */
 .forestCard {
   width: 50%;
 }
+
+/* ------Details------- */
+
+#details {
+  color: black;
+  background-color: white;
+  outline: green;
+  border-radius: 1em;
+  padding: 0.5em 0.5em; 
+  opacity: .80;
+  width: 640px;
+}
+
+/* #Name {
+  color: black;
+  background-color: white;
+  outline: green;
+  border-radius: 1em;
+  padding: 0.5em 0.5em; 
+  opacity: .80;
+  width: 640px;
+} */
