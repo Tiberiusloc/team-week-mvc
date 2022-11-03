@@ -16,38 +16,3 @@
   @Html.EditorFor(model => model.Found)
 }
 
-@* <input type="submit" value="Found!" />
-}
-<form id="found-form">
-  <input type="checkbox" id="found" value="true">
-  <button id="button" type="submit">Found!</button>
-</form> *@
-@* <script>
-function submitEvent(event) {
-  event.preventDefault();
-  handleFormSubmission();
-}
-
-function handleFormSubmission () {
-  var modelFound = @Html.Raw(Json.Encode(@Model.Found));
-  console.log(modelFound);
-  let formvalue = document.getElementById("found").value;
-  console.log(formvalue);
-    if (formvalue == "true") {
-      let @Model.Found = true;
-      console.log(@Model.Found)
-    }
-  else {
-    }
-  return @Model.Found;
-}
-
-
-
-window.addEventListener("load", function() {
-  const form = document.getElementById("found-form");
-  form.addEventListener("submit", submitEvent);
-});
-</script> *@
-
-
