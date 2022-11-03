@@ -1,10 +1,18 @@
 @{
   Layout = "_Layout";
-}
+} 
 
-@using ForageMvc.Models.Item
+@model ForageMvc.Models.Item
 @using System;
+@using System.Web;
 
 
-<h3>@Html.DisplayNameFor(model => model.ItemName)</h3>
+<h3>@Model.Name</h3>
+<h4>@Model.Found</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Found")
+  @Html.EditorFor(model => model.Found)
+}
 

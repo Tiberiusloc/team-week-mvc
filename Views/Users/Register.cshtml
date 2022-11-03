@@ -1,0 +1,32 @@
+@{
+    Layout = "_Layout";
+}
+
+<head>
+<link href="~/css/registerpage.css" rel="stylesheet">
+</head>
+
+@using ForageMvc.ViewModels
+
+<div class="mascot"><img src="~/img/fairy_critter_tran.png" style="width: 25em; height:15em;">
+</div>
+
+@model RegisterViewModel
+<h3 class="registerinstr">Register New User</h3>
+<hr />
+@using (Html.BeginForm("Register", "Users", FormMethod.Post))
+{
+  @Html.LabelFor(user => user.Email, null, new{@class = "email"})
+  @Html.TextBoxFor(user => user.Email)
+<br>
+<br>
+  @Html.LabelFor(user => user.Password, null, new{@class = "password"})
+  @Html.PasswordFor(user => user.Password)
+<br>
+<br>
+  @Html.LabelFor(user => user.ConfirmPassword, null, new{@class = "conpassword"})
+  @Html.PasswordFor(user => user.ConfirmPassword)
+<br>
+<br>
+  <input type="submit" value="Register" class="registerbtn" />
+}

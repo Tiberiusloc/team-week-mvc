@@ -12,6 +12,7 @@ namespace ForageMvc.Controllers
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
 
+
     public UsersController (UserManager<User> userManager, SignInManager<User> signInManager, ForageMvcContext db)
     {
       _userManager = userManager;
@@ -40,6 +41,7 @@ namespace ForageMvc.Controllers
       }
       else
       {
+        ViewBag.ErrogMessage = "Registration Failed.";
         return View();
       }
     }
@@ -59,6 +61,7 @@ namespace ForageMvc.Controllers
       }
       else
       {
+        ViewBag.ErrorMessage = "Unable to Login.";
         return View();
       }
     }
@@ -71,3 +74,67 @@ namespace ForageMvc.Controllers
     }
   }
 }
+
+//Integrating Score Further Expl
+
+
+// private async Task LoadAsync(User user)
+// {
+//     var userName = await _userManager.GetUserNameAsync(user);
+//     var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+
+//     Username = userName;
+
+//     Input = new InputModel
+//     {
+//         PhoneNumber = phoneNumber,
+
+//         Instagram=user.Instagram,
+
+//         Location = user.Location
+//     };
+// }
+// public async Task<IActionResult> OnPostAsync(int modelScore)
+// {
+//     var user = await _userManager.GetUserAsync(User);
+    // if (user == null)
+    // {
+    //     return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+    // }
+
+    // if (!ModelState.IsValid)
+    // {
+    //     await LoadAsync(user);
+    //     return Page();
+    // }
+
+    // var Score = await _userManager.GetScoreAsync(user);
+
+    // if (Input.PhoneNumber != phoneNumber)
+    // {
+    //     var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
+    //     if (!setPhoneResult.Succeeded)
+    //     {
+    //         var userId = await _userManager.GetUserIdAsync(user);
+    //         throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
+    //     }
+    // }
+    // if (Input.Instagram != user.Instagram)
+    // {
+    //     user.Instagram = Input.Instagram;
+    // }
+
+    // if (Input.Location != user.Location)
+    // {
+    //     user.Location = Input.Location;
+    // }
+//     if (modelScore > 0)
+//     {
+//       user.Score += modelScore;
+//     }
+
+//     await _userManager.UpdateAsync(user);
+//     await _signInManager.RefreshSignInAsync(user);
+//     // StatusMessage = "Your profile has been updated";
+//     return RedirectToAction("Details");
+// }

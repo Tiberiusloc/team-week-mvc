@@ -64,6 +64,6 @@ namespace ForageMvc.Models
     {
       string jsonMessage = JsonConvert.SerializeObject(item);
       var apiCallTask = ApiHelper.Put(item.ItemId, jsonMessage);
-    }
+    } 
   }
 }

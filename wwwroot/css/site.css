@@ -87,13 +87,25 @@ body {
 #item-heading {
   text-align: center;
 }
-
-#easy {
+.hidden {
   display: none;
 }
-/* #medium {
-  display:none;
-} */
+#medium {
+  margin-left: 10%;
+}
+#medium button {
+  color: aliceblue;
+  margin-top: 10%;
+  margin-left: 1%;
+  border-style: none;
+  float:left;
+  background-color: darkgreen;
+}
+#medium button img {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10%;
+}
 #hard {
   display:none;
 }
