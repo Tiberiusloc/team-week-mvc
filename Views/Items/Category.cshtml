@@ -5,7 +5,7 @@
 @using System;
 
 <h3>Select Difficulty Level:</h3>
-<form id="DifficultyLevel">
+<form id="difficulty-level">
   <select class="form-control" id="select">
       <option>Select Level</option> 
       <option value="easy">Easy</option> 
@@ -43,7 +43,7 @@ function handleFormSubmission () {
 
 window.addEventListener("load", function() {
   hideResults();
-  const form = document.getElementById("DifficultyLevel");
+  const form = document.getElementById("difficulty-level");
   form.addEventListener("submit", submitEvent);
 });
 </script>
@@ -55,7 +55,7 @@ window.addEventListener("load", function() {
     if (item.Difficulty == "easy")
     {
 		<li>
-			<p>@item.Name | @item.Category | @item.Difficulty </p>
+			<p>@Html.ActionLink($"{@item.Name}", "Details", new {id = item.ItemId}) | @item.Category | @item.Difficulty </p>
 		</li>
 		<br>
     }

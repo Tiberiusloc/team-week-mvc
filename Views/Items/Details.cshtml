@@ -1,10 +1,53 @@
-@* @{
+@{
   Layout = "_Layout";
+} 
+
+@model ForageMvc.Models.Item
+@using System;
+@using System.Web;
+
+
+<h3>@Model.Name</h3>
+<h4>@Model.Found</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Found")
+  @Html.EditorFor(model => model.Found)
 }
 
-@using ForageMvc.Models.Item
-@using System;
+@* <input type="submit" value="Found!" />
+}
+<form id="found-form">
+  <input type="checkbox" id="found" value="true">
+  <button id="button" type="submit">Found!</button>
+</form> *@
+@* <script>
+function submitEvent(event) {
+  event.preventDefault();
+  handleFormSubmission();
+}
+
+function handleFormSubmission () {
+  var modelFound = @Html.Raw(Json.Encode(@Model.Found));
+  console.log(modelFound);
+  let formvalue = document.getElementById("found").value;
+  console.log(formvalue);
+    if (formvalue == "true") {
+      let @Model.Found = true;
+      console.log(@Model.Found)
+    }
+  else {
+    }
+  return @Model.Found;
+}
 
 
-<h3>@Html.DisplayNameFor(model => model.ItemName)</h3> *@
+
+window.addEventListener("load", function() {
+  const form = document.getElementById("found-form");
+  form.addEventListener("submit", submitEvent);
+});
+</script> *@
+
 

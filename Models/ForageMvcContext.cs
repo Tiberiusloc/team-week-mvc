@@ -15,5 +15,16 @@ namespace ForageMvc.Models
     {
       optionsBuilder.UseLazyLoadingProxies();
     }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      base.OnModelCreating(builder);
+      builder.Entity<Card>()
+          .HasData(
+            new Card {
+              CardId= 1, Title= "Amateur Botanist", Type= "Score", Difficulty= "beginner", ImageUrl="css/assets/img/card1.webp", ScoreReq= 15 
+            }
+          );
+    }
   }
 }

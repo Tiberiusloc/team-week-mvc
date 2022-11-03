@@ -13,6 +13,7 @@ namespace ForageMvc.Models
     public string Type { get; set; }
     public string Difficulty { get; set; }
     public string ImageUrl { get; set; }
+    public int ScoreReq { get; set; }
     public virtual ICollection<UserCard> JoinEntities { get; }
 
   }

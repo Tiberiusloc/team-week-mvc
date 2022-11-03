@@ -13,9 +13,7 @@ namespace ForageMvc.Controllers
   {
     public IActionResult Index()
     {
-      //not sure if we need this?
-      var allItems = Item.GetItems();
-      return View(allItems);
+      return View();
     }
 
     public ActionResult Category(string cat)
@@ -27,6 +25,7 @@ namespace ForageMvc.Controllers
 		public ActionResult Details(int id)
 		{
 			var thisItem = Item.GetItemDetails(id);
+
 			return View(thisItem);
 		}
 
@@ -34,7 +33,7 @@ namespace ForageMvc.Controllers
     public ActionResult Details(Item item)
 		{
 			Item.PutItem(item);
-      return RedirectToAction("Category", new { id = item.ItemId });;
+      return RedirectToAction("Details", new { id = item.ItemId });;
 		}
   }
 }
