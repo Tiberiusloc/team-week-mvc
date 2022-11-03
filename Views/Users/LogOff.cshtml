@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+<h3>Are you sure you want to log out?</h3>
+<br>
+@using(Html.BeginForm("LogOff", "Users", new {@class = "logoff"}))
+{
+  <input type="submit" class="btn btn-outline-warning" value="Log Out"/>
+}

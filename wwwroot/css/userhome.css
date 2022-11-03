@@ -114,3 +114,10 @@ body {
   position: absolute;
   top: 10%;
 }
+
+.mascot {
+  align-content: center;
+  position: absolute;
+  top: 15%;
+  margin-left: 70%;
+}

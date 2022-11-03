@@ -9,6 +9,9 @@
 @using System.Security.Claims
 @model ForageMvc.Models.User
 
+<div class="mascot"><img src="~/img/botanist.png" style="width: 20em; height:35em;">
+</div>
+
 <p style="color:red">@ViewBag.ErrorMesssage</p>
 @if (User.Identity.IsAuthenticated)
 {

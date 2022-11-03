@@ -4,9 +4,13 @@
 <head> <link rel="stylesheet" href="~/css/site.css"> </head>
 @using ForageMvc.Models
 
-<h3>Select Difficulty Level:</h3>
+<div class="mascot"><img src="~/img/botanist.png" style="width: 20em; height:35em;">
+</div>
+
+<div id="center-cat">
+<h3 id="d-heading"><span>Select Difficulty Level:</span></h3>
 <form id="difficulty-level">
-  <select class="form-control" id="select">
+  <select class="custom-select" id="select" style="width: 200px;">
       <option>Select Level</option> 
       <option value="easy">Easy</option> 
       <option value="medium">Medium</option>
@@ -14,6 +18,7 @@
   </select>
 <button id="button" type="submit">Select</button>
 </form>
+</div>
 
 <script type="text/javascript">
 function submitEvent(event) {
@@ -55,7 +60,7 @@ window.addEventListener("load", function() {
     {
 		@using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
     {
-      <button type="submit"> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@item.Name</button>
+      <h6> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@Html.ActionLink(@item.Name, "Details", new { id = item.ItemId})</h6>
     }
 		<br>
     }
@@ -83,9 +88,11 @@ window.addEventListener("load", function() {
     {
 		@using (Html.BeginForm("Details", "Items", new { id = item.ItemId}))   
     {
-      <button type="submit"> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@item.Name</button>
+      <h6> <img src="@Url.Content(item.CatPicture)" width="150px"/><br>@Html.ActionLink(@item.Name, "Details", new { id = item.ItemId})</h6>
     }
-		<br>
     }
 	}
+  </div>
+<div id="cat-link"><span>
+@Html.ActionLink("Choose Another Ecosystem", "Index")</span>
 </div>

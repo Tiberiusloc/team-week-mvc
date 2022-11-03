@@ -8,8 +8,12 @@
 @using System.Web; 
 @using ForageMvc.Models
 
+<div class="mascot"><img src="~/img/botanist.png" style="width: 20em; height:35em;">
+</div>
+
+<div class="container details-container">
 <h3 id="Name">@Model.Name</h3>
-<iframe src="@Url.Content(Model.Picture)" width="640" height="480" allow="autoplay"></iframe>
+<iframe id="picture" src="@Url.Content(Model.Picture)" width="640" height="480" allow="autoplay"></iframe>
 <div id="details">
 <p>@Model.Type</p>
 <p>Botanical Name:<br> @Model.Latin</p>
@@ -40,4 +44,8 @@ else
   @Html.Label("Found")
   @Html.EditorFor(model => model.Found)
 }
+</div>
+</div>
+<div id="details-link"><span>
+@Html.ActionLink("Choose Another Ecosystem", "Index")</span>
 </div>

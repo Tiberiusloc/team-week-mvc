@@ -3,7 +3,10 @@
 }
 <head> <link rel="stylesheet" href="~/css/site.css"> </head>
 
-<h3 id="item-heading">Which Oregon ecosystem are you exploring?</h3>
+<div class="mascot"><img src="~/img/botanist.png" style="width: 20em; height:35em;">
+</div>
+
+<h3 id="item-heading"><span>Which Oregon ecosystem are you exploring?</span></h3>
 <div id="cat-buttons">
   @using (Html.BeginForm("Category", "Items", new { cat = "desert"}))   
   {
@@ -20,5 +23,6 @@
         <img src="css/assets/img/coast-category.png" width="150px"/><br>Coast</button>
   }
 </div>
+
 
 
