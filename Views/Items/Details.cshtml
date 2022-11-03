@@ -3,16 +3,39 @@
 } 
 
 @model ForageMvc.Models.Item
-@using System;
-@using System.Web;
+@using System; 
+@using System.Web; 
+@using ForageMvc.Models
 
 
 <h3>@Model.Name</h3>
-<h4>@Model.Found</h4>
+<iframe src="https://drive.google.com/file/d/1A0oevkGY-IK7YuTt1bqD6Z2wet2NLD44/preview" width="640" height="480" allow="autoplay"></iframe>
+<p>@Model.Type</p>
+<p>Botanical Name:<br> @Model.Latin</p>
+<p>Description:<br> @Model.Description</p>
+<p>Habitat:<br> @Model.Habitat</p>
+<p>Smell:<br> @Model.Smell</p>
+<p>Taste:<br> @Model.Taste</p>
 
+@if (Model.Edible == true)
+{
+<p>Edible!<br>@Model.EdibleDesc</p>
+
+}
+else
+{
+<p>Toxic!<br>@Model.EdibleDesc</p>
+}
+
+
+<p>@Model.Symbolism</p>
+<p>@Model.History </p>
+@* <p>Score:<br> @Model.Score</p> *@
+
+
+<p></p>
 @using (Html.BeginForm())
 {
   @Html.Label("Found")
   @Html.EditorFor(model => model.Found)
 }
-

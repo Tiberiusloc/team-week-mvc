@@ -22,6 +22,7 @@ namespace ForageMvc.Controllers
 			return View(allCatItems);
 		}
 
+
 		public ActionResult Details(int id)
 		{
 			var thisItem = Item.GetItemDetails(id);

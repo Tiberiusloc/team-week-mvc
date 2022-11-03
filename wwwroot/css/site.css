@@ -109,3 +109,8 @@ body {
 #hard {
   display:none;
 }
+
+/* -----UserIndex--------- */
+.forestCard {
+  width: 50%;
+}
